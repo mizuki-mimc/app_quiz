@@ -1,0 +1,18 @@
+current directory: /app/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/local/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /app/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250619-14-imr6ip sitelibdir\=./.gem.20250619-14-imr6ip clean
+
+current directory: /app/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250619-14-imr6ip sitelibdir\=./.gem.20250619-14-imr6ip
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /app/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250619-14-imr6ip sitelibdir\=./.gem.20250619-14-imr6ip install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20250619-14-imr6ip/skiptrace/internal
+
+current directory: /app/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250619-14-imr6ip sitelibdir\=./.gem.20250619-14-imr6ip clean

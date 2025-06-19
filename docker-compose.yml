@@ -1,0 +1,28 @@
+# docker-compose.yml
+version: '3.8' # この 'version' 行は警告が出ていますが、今は無視して大丈夫です。
+
+services:
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'" # <-- コマンドを元に戻す
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      RAILS_ENV: development
+      # DATABASE_URL: postgresql://user:password@db:5432/novel_quiz_app_development # <-- この行を完全に削除またはコメントアウト！
+
+  db:
+    image: postgres:16.3-alpine
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: novel_quiz_app_development
+
+volumes:
+  pg_data:
